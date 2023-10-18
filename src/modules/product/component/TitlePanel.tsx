@@ -1,6 +1,6 @@
 import IconProduct from '/iconProduct.svg'
 
-const TitlePanel = ({ nameAction, nameObject, nameBtn }) => {
+const TitlePanel = ({ nameAction, nameObject, nameBtn, modalOpen }) => {
     return (
         <div className="flex mx-6 items-center justify-between">
             <div className='flex items-center space-x-4'>
@@ -12,7 +12,7 @@ const TitlePanel = ({ nameAction, nameObject, nameBtn }) => {
             </div>
 
             <div>
-                <button className="border border-[red] rounded-sm px-4 py-2">{nameBtn}</button>
+                <button className="border border-[red] rounded-sm px-4 py-2" onClick={modalOpen}>{nameBtn}</button>
             </div>
         </div>
     )
