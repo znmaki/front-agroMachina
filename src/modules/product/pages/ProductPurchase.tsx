@@ -1,4 +1,4 @@
-import { Table, TitlePanel, useModal } from "..";
+import { Form, Table, TitlePanel, useModal } from "..";
 import { IconDelete } from "../../../shared";
 import { Modal, Box } from '@mui/material';
 
@@ -28,11 +28,17 @@ const columns = [
   actionDelete(235)
 ];
 
+const intial = {
+  selectField: '', //ACA ES EL NOMBRE
+  quantity: '',
+  price: '',
+}  //REEMPLAZAR POR LO QUE PEDIRA CADA MODULO
+
 const ProductPurchase = () => {
   const { open, handleOpen, handleClose, style } = useModal();
 
   return (
-    <div className="border border-red-600 mx-4">
+    <div className="border border-red-600 mx-4 py-4 rounded-md relative">
       <TitlePanel
         nameAction="Registrar"
         nameObject="Compra"
@@ -45,9 +51,11 @@ const ProductPurchase = () => {
         onClose={handleClose}
       >
         <Box sx={style}>
-          <p>Hola</p>
+          <Form initialData={intial}/>
         </Box>
       </Modal>
+
+      <hr className="mt-[4rem] mb-4"/>
 
       <div className="w-[63%] m-auto">
         <Table rows={rows} columns={columns} />

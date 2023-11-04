@@ -1,7 +1,9 @@
 export { default as Layout } from './Layout/Layout';
+export { default as Card } from './component/Card';
+export { default as Form } from './component/Form';
 export { default as Header } from './component/Header';
 export { default as Table } from './component/Table';
-export { default as TitlePanel } from './component/TitlePanel';
+export * from './component/TitlePanel';
 export { default as useModal } from './hooks/useModal';
 export { default as MainDashboard } from './pages/MainDashboard';
 export { default as ProductDashboards } from './pages/ProductDashboards';

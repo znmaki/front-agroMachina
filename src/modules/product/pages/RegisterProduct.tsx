@@ -1,4 +1,4 @@
-import { Table, TitlePanel, useModal } from "..";
+import { Form, Table, TitlePanel, useModal } from "..";
 import { IconUpdate } from "../../../shared";
 import { Modal, Box } from '@mui/material';
 
@@ -28,11 +28,19 @@ const columns = [
   actionEdit(235)
 ];
 
+const intial = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  numericFieldName: '',
+  selectField: ''
+}  //REEMPLAZAR POR LO QUE PEDIRA CADA MODULO
+
 const RegisterProduct = () => {
   const { open, handleOpen, handleClose, style } = useModal();
 
   return (
-    <div className="border border-red-600 mx-4">
+    <div className="border border-red-600 mx-4 py-4 rounded-md relative">
       <TitlePanel
         nameAction="Registrar"
         nameObject="Producto"
@@ -45,9 +53,11 @@ const RegisterProduct = () => {
         onClose={handleClose}
       >
         <Box sx={style}>
-          <p>Hola</p>
+          <Form initialData={intial} title='Registro de Producto' />
         </Box>
       </Modal>
+
+      <hr className="mt-[4rem] mb-4" />
 
       <div className="w-[63%] m-auto">
         <Table rows={rows} columns={columns} />

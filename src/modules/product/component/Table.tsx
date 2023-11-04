@@ -1,8 +1,10 @@
 import { DataGrid, GridToolbarQuickFilter } from "@mui/x-data-grid";
 
+//<div className='flex items-center justify-end space-x-5 mb-2'>
+
 const QuickSearchToolbar = () => {
     return (
-        <div className='flex items-center justify-end space-x-5 mb-2'>
+        <div className='absolute top-[-4.5rem] right-[-20.3rem]'>
             <div className="border border-red-500 bg-white px-2 py-1 rounded-lg">
                 <GridToolbarQuickFilter />
             </div>

@@ -16,7 +16,7 @@ const Header = () => {
                 <Link to={'/registrar-producto'} className='text-[#736363] py-2'>Registrar Producto</Link>
                 <Link to={'/registro-compra'} className='text-[#736363] py-2'>Registrar Compra</Link>
                 <Link to={'/registro-venta'} className='text-[#736363] py-2'>Registrar Venta</Link>
-                <Link to={'/tablero-productos/:1'} className='text-[#736363] py-2'>Ver Producto</Link>
+                <Link to={'/tablero-productos/1'} className='text-[#736363] py-2'>Ver Producto</Link>
             </div>
         </>
     )

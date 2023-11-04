@@ -1,4 +1,4 @@
-import { TitlePanel } from "..";
+import { Card, TitleDash, TitleWInfo } from "..";
 /* import { IconDelete } from "../../../shared"; */
 
 /* const actionSelect = (width: number) => ({
@@ -15,11 +15,44 @@ import { TitlePanel } from "..";
 const ProductDashboards = () => {
   return (
     <div className="border border-red-600 mx-4">
-      <TitlePanel
+      <TitleDash
         nameAction="Mirando"
         nameObject="Papas con Camote"
-        nameBtn="Nuevo Producto"
       />
+
+      <div>
+        <TitleWInfo
+          title='Información de Inventario'
+          infoHover='Hola'
+          style='basis-[55%]'
+        />
+
+        <div className='grid grid-cols-2 gap-10'>
+          <Card
+            quantity={4}
+            title='Unidades Disponibles'
+          />
+          <Card
+            quantity={4}
+            title='Unidades Vendidas'
+          />
+          <Card
+            quantity={4}
+            title='Ingreso Total'
+            style='col-span-2'
+          />
+        </div>
+      </div>
+
+      <div>
+        <TitleWInfo
+          title='Prediccion de Ventas'
+          infoHover='Hola'
+          style='basis-[55%]'
+        />
+
+        <p>Terrible Grafico</p>
+      </div>
     </div>
   )
 }
